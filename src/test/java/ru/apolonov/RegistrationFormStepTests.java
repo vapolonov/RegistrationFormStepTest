@@ -34,46 +34,49 @@ public class RegistrationFormStepTests extends TestBase {
         });
 
         step("Заполняем форму регистрации данными", () -> {
-            $("#firstName").setValue(firstName);
-            $("#lastName").setValue(lastName);
-            $("#userEmail").setValue(email);
-            $("#genterWrapper").$(byText("Female")).click();
-            $("#userNumber").setValue(mobile);
-        });
 
-        step("Выбираем дату рождения", () -> {
-            $("#dateOfBirthInput").click();
-            $(".react-datepicker__month-select").selectOption("September");
-            $(".react-datepicker__year-select").selectOption("1974");
-            $(".react-datepicker__day--009:not(.react-datepicker__day--outside-month)").click();
-        });
+            step("Заполняем данные пользователя", () -> {
+                $("#firstName").setValue(firstName);
+                $("#lastName").setValue(lastName);
+                $("#userEmail").setValue(email);
+                $("#genterWrapper").$(byText("Female")).click();
+                $("#userNumber").setValue(mobile);
+            });
 
-        step("Устанавливаем предметы", () -> {
-            $("#subjectsInput").setValue("Maths").pressEnter();
-            $("#subjectsInput").setValue("English").pressEnter();
-        });
+            step("Выбираем дату рождения", () -> {
+                $("#dateOfBirthInput").click();
+                $(".react-datepicker__month-select").selectOption("September");
+                $(".react-datepicker__year-select").selectOption("1974");
+                $(".react-datepicker__day--009:not(.react-datepicker__day--outside-month)").click();
+            });
 
-        step("Выбираем хобби", () -> {
-            $("#hobbiesWrapper").$(byText("Sports")).click();
-            $("#hobbiesWrapper").$(byText("Music")).click();
-        });
+            step("Устанавливаем предметы", () -> {
+                $("#subjectsInput").setValue("Maths").pressEnter();
+                $("#subjectsInput").setValue("English").pressEnter();
+            });
 
-        step("Прикрепляем файл", () -> {
-            $("#uploadPicture").uploadFile(new File("src/test/resources/img/new.jpg"));
-        });
+            step("Выбираем хобби", () -> {
+                $("#hobbiesWrapper").$(byText("Sports")).click();
+                $("#hobbiesWrapper").$(byText("Music")).click();
+            });
 
-        step("Заполняем адрес", () -> {
-            $("#currentAddress").setValue(country + ", " + city + ", " + street + ", " + houseNumber);
-        });
+            step("Прикрепляем файл", () -> {
+                $("#uploadPicture").uploadFile(new File("src/test/resources/img/new.jpg"));
+            });
 
-        step("Выбираем штат", () -> {
-            $("#state").scrollTo().click();
-            $("#stateCity-wrapper").$(byText("Haryana")).click();
-        });
+            step("Заполняем адрес", () -> {
+                $("#currentAddress").setValue(country + ", " + city + ", " + street + ", " + houseNumber);
+            });
 
-        step("Выбираем город", () -> {
-            $("#city").click();
-            $("#stateCity-wrapper").$(byText("Panipat")).click();
+            step("Выбираем штат", () -> {
+                $("#state").scrollTo().click();
+                $("#stateCity-wrapper").$(byText("Haryana")).click();
+            });
+
+            step("Выбираем город", () -> {
+                $("#city").click();
+                $("#stateCity-wrapper").$(byText("Panipat")).click();
+            });
         });
 
         step("Отправляем форму", () ->
