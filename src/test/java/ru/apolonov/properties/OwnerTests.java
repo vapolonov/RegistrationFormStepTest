@@ -1,11 +1,13 @@
 package ru.apolonov.properties;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.apolonov.config.CredentialsConfig;
 
 import static java.lang.String.format;
 
+@Tag("properties")
 public class OwnerTests {
 
     public CredentialsConfig credentials =
