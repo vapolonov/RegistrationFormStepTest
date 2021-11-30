@@ -1,7 +1,8 @@
-package ru.apolonov;
+package ru.apolonov.tests.formtest;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
+import ru.apolonov.tests.TestBase;
 
 import java.io.File;
 

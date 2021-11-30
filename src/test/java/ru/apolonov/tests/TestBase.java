@@ -1,4 +1,4 @@
-package ru.apolonov;
+package ru.apolonov.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
