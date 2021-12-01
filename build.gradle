@@ -53,16 +53,34 @@ tasks.withType(Test) {
 }
 
 task properties_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "properties"
+    }
+}
+
+task owner_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "owner"
+    }
+}
+
+task registration_page_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "registrationPage"
+    }
+}
+
+task properties_tests(type: Test) {
     systemProperty("browserSize", System.getProperty("browserSize", "400x400"))
     useJUnitPlatform {
         includeTags "properties"
     }
 }
 
-task many_tags_tests(type: Test) {
+task all_tests(type: Test) {
     useJUnitPlatform {
         includeTags "properties"
-        includeTags "smoke"
-        excludeTags "prod"
+        includeTags "owner"
+        excludeTags "registrationTest"
     }
 }

@@ -22,7 +22,7 @@ public class SystemPropertiesTests {
     void someTest5() {
         String browser = System.getProperty("browser", "chrome");
         String version = System.getProperty("version", "91");
-        String browserSize = System.getProperty("browserSize", "300x300");
+        String browserSize = System.getProperty("browserSize", "1920x1080");
 
         System.out.println(browser);
         System.out.println(version);
