@@ -70,7 +70,7 @@ task registration_page_tests(type: Test) {
     }
 }
 
-task properties_tests(type: Test) {
+task = task properties_tests(type: Test) {
     systemProperty("browserSize", System.getProperty("browserSize", "400x400"))
     useJUnitPlatform {
         includeTags "properties"
