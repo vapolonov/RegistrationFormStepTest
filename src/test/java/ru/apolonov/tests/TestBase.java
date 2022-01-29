@@ -22,7 +22,7 @@ public class TestBase {
 
         Configuration.browserSize = "1920x1080";
         Configuration.remote = format("https://%s:%s@%s", credentials.login(),
-                credentials.password(), System.getProperty("url"));
+               credentials.password(), System.getProperty("url"));
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -9,7 +9,7 @@ repositories {
 
 def allureVersion = "2.16.1",
     selenideVersion = "5.24.0",
-    junitVersion = "5.8.1"
+    junitVersion = "5.8.2"
 
 allure {
     version = allureVersion
@@ -57,7 +57,7 @@ task owner_tests(type: Test) {
         includeTags "owner"
     }
 }
-
+/*
 task registration_page_tests(type: Test) {
     useJUnitPlatform {
         includeTags "registrationPage"
@@ -78,3 +78,5 @@ task all_tests(type: Test) {
         excludeTags "registrationTest"
     }
 }
+
+ */

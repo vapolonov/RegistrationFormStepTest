@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class SystemPropertiesTests {
 
     @Test
-    @Tag("properties")
+    @Tag("propertie1s")
     void someTest4() {
         String value = System.getProperty("browser", "chrome");
         System.out.println(value);
